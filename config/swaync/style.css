@@ -1,0 +1,41 @@
+@import "/home/vlad/.cache/wal/colors-waybar.css";
+
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 13px;
+}
+
+.notification-row { outline: none; }
+
+.notification, .control-center {
+  background: alpha(@background, 0.92);
+  color: @foreground;
+  border: 2px solid @color4;
+  border-radius: 16px;
+}
+
+.notification { margin: 6px 10px; padding: 4px; }
+.control-center { padding: 8px; }
+
+.widget-title { margin: 8px; }
+.widget-title > label { color: @color4; font-size: 16px; }
+
+.widget-title > button {
+  background: @color4;
+  color: @background;
+  border: none;
+  border-radius: 10px;
+  padding: 4px 12px;
+}
+
+.widget-dnd { margin: 8px; }
+.widget-dnd > switch:checked { background: @color4; }
+
+.close-button {
+  background: @color1;
+  color: @background;
+  border-radius: 8px;
+}
+
+.summary { color: @color4; font-weight: bold; }
+.body { color: @foreground; }

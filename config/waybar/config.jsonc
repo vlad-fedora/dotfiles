@@ -1,0 +1,91 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "margin-top": 6,
+  "margin-left": 10,
+  "margin-right": 10,
+  "spacing": 8,
+
+  "modules-left": ["wlr/taskbar"],
+  "modules-center": ["clock"],
+  "modules-right": [
+  "tray",
+  "pulseaudio",
+  "pulseaudio#mic",
+  "temperature",
+  "custom/gpu-temp",
+  "custom/power"
+],
+
+  "wlr/taskbar": {
+    "format": "{icon} {app_id}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "persistent-workspaces": { "*": 5 },
+    "on-click": "activate"
+  },
+
+  "pulseaudio": {
+    "format": "VOL {volume}%",
+    "format-muted": "VOL off",
+    "on-click": "pavucontrol",
+    "scroll-step": 5
+  },
+
+  "pulseaudio#mic": {
+    "format": "{format_source}",
+    "format-source": "MIC {volume}%",
+    "format-source-muted": "MIC off",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-"
+  },
+
+  "network": {
+    "format-ethernet": "IP {ipaddr}",
+    "format-wifi": "IP {ipaddr}",
+    "format-disconnected": "offline",
+    "tooltip-format": "{ifname}"
+  },
+
+  "memory": { "format": "RAM {percentage}%" },
+
+  "cpu": { "format": "CPU {usage}%" },
+
+  "temperature": {
+  "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
+  "input-filename": "temp1_input",
+  "critical-threshold": 80,
+  "format": "CPU {temperatureC}°C"
+},
+
+  "custom/gpu-temp": {
+  "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader",
+  "format": "GPU {}°C",
+  "interval": 5,
+  "tooltip": false
+},
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%A, %d %B %Y}"
+  },
+
+ "tray": {
+  "icon-size": 18,
+  "spacing": 10
+},
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "/home/vlad/.config/waybar/power.sh"
+  }
+}

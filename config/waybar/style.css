@@ -1,0 +1,143 @@
+@import "/home/vlad/.cache/wal/colors-waybar.css";
+
+* {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", sans-serif;
+  font-size: 13px;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: @foreground;
+}
+
+#pulseaudio,
+#network,
+#tray,
+#custom-gpu-temp,
+#memory,
+#cpu,
+#temperature,
+#clock,
+#custom-power,
+#workspaces,
+#taskbar {
+  background: alpha(@background, 0.8);
+  color: @foreground;
+  border-radius: 16px;
+  padding: 0 14px;
+}
+
+#workspaces {
+  padding: 0 6px;
+}
+
+#workspaces button {
+  color: @foreground;
+  background: transparent;
+  padding: 0 10px;
+  margin: 4px 2px;
+  border-radius: 12px;
+}
+
+#workspaces button.empty {
+  opacity: 0.45;
+}
+
+#workspaces button:hover {
+  background: alpha(@color4, 0.4);
+}
+
+#workspaces button.active {
+  background: @color4;
+  color: @background;
+  opacity: 1;
+}
+
+#taskbar {
+  padding: 0 6px;
+}
+
+#taskbar button {
+  color: @foreground;
+  background: transparent;
+  padding: 0 10px;
+  margin: 4px 3px;
+  border-radius: 12px;
+}
+
+#taskbar button:hover {
+  background: alpha(@color4, 0.4);
+}
+
+#taskbar button.active {
+  background: @color4;
+  color: @background;
+}
+
+#pulseaudio.muted,
+#pulseaudio.source-muted {
+  color: @color1;
+}
+
+#temperature.critical {
+  background: @color1;
+  color: @background;
+}
+
+#tray > .needs-attention {
+  background: @color1;
+  border-radius: 12px;
+}
+
+#tray > .passive {
+  opacity: 0.6;
+}
+
+#clock {
+  background: @color5;
+  color: @background;
+}
+
+#custom-power {
+  background: @color1;
+  color: @background;
+  padding: 0 16px;
+}
+
+
+#temperature.critical {
+background: @color1;
+color: @background;
+}
+
+menu {
+  background: #1b1b21;
+  color: #e6e6ea;
+  border: 1px solid #3a3a44;
+  border-radius: 12px;
+  padding: 6px;
+}
+
+menu menuitem {
+  background: transparent;
+  color: #e6e6ea;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+menu menuitem:hover {
+  background: #33333c;
+}
+
+menu menuitem:disabled {
+  color: #7d7d88;
+}
+
+menu separator {
+  background: #3a3a44;
+  min-height: 1px;
+  margin: 4px 8px;
+}

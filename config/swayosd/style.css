@@ -1,0 +1,34 @@
+@import "/home/vlad/.cache/wal/colors-waybar.css";
+
+window#osd {
+  background: alpha(@background, 0.9);
+  border: 2px solid @color4;
+  border-radius: 20px;
+  padding: 12px;
+}
+
+window#osd #container {
+  margin: 12px;
+}
+
+window#osd image,
+window#osd label {
+  color: @foreground;
+}
+
+window#osd progressbar:disabled,
+window#osd image:disabled {
+  opacity: 0.5;
+}
+
+window#osd progressbar trough {
+  background: alpha(@foreground, 0.2);
+  border-radius: 999px;
+  min-height: 8px;
+}
+
+window#osd progressbar progress {
+  background: @color4;
+  border-radius: 999px;
+  min-height: 8px;
+}

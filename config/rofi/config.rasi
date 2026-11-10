@@ -1,0 +1,58 @@
+configuration {
+  modi: "drun,run";
+  show-icons: true;
+  font: "JetBrainsMono Nerd Font 12";
+}
+
+@import "/home/vlad/.config/rofi/colors.rasi"
+
+* {
+  background-color: transparent;
+  text-color: @fg;
+}
+
+window {
+  width: 600px;
+  background-color: @bg;
+  border: 2px;
+  border-color: @accent;
+  border-radius: 16px;
+}
+
+mainbox {
+  padding: 16px;
+  spacing: 12px;
+}
+
+inputbar {
+  padding: 8px;
+  spacing: 8px;
+  border: 0 0 2px 0;
+  border-color: @accent;
+  children: [prompt, entry];
+}
+
+prompt {
+  text-color: @accent;
+}
+
+listview {
+  lines: 8;
+  spacing: 4px;
+  scrollbar: false;
+}
+
+element {
+  padding: 8px;
+  spacing: 10px;
+  border-radius: 10px;
+}
+
+element selected.normal {
+  background-color: @accent;
+  text-color: @bgs;
+}
+
+element-icon {
+  size: 1.4em;
+}
