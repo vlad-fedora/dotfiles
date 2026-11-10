@@ -103,7 +103,7 @@
 	adwaita-qt
 	adwaita-qt6
 	adw-gtk3
-	nemo
+	mangohud
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
