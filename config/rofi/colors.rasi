@@ -1,7 +1,7 @@
 * {
-  bg: #19102cE6;
-  bgs: #19102c;
-  fg: #c5c3ca;
-  accent: #D0749F;
-  urgent: #5359B1;
+  bg: #19220fE6;
+  bgs: #19220f;
+  fg: #c5c7c3;
+  accent: #89B9D1;
+  urgent: #78ADC8;
 }
