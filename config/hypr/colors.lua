@@ -1,5 +1,5 @@
 return {
-  active1 = "rgba(619369ee)",
-  active2 = "rgba(B2A144ee)",
-  inactive = "rgba(596d6daa)",
+  active1 = "rgba(D0749Fee)",
+  active2 = "rgba(8B7BC2ee)",
+  inactive = "rgba(686176aa)",
 }
